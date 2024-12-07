@@ -29,6 +29,7 @@ void AAuraEffectActor::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActo
 		// Casting away the const, avoid ever doing this!
 		UAuraAttributeSet* MutabaleAuraAttributeSet = const_cast<UAuraAttributeSet*>(AuraAttributeSet);
 		MutabaleAuraAttributeSet->SetHealth(AuraAttributeSet->GetHealth() + 25.f);
+		MutabaleAuraAttributeSet->SetMana(AuraAttributeSet->GetMana() - 25.f);
 		Destroy();
 	}
 }
